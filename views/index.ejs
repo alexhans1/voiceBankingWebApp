@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
+  <title>Easy Voice Banking</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <script src="javascripts/snackbar.js"></script>
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -25,12 +27,15 @@
         <span class="input-group-addon" id="sizing-addon1">
           <i class="fa fa-lock" aria-hidden="true"></i>
         </span>
-        <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+        <input type="text" class="form-control" placeholder="Enter your TAN" aria-describedby="sizing-addon1">
       </div>
+      <button style="margin-top: 10px" class="btn btn-lg btn-success" onclick="myFunction()">Submit</button>
     </div>
   </div>
 </div>
 
+<!-- The actual snackbar -->
+<div id="snackbar"><p style="font-size: 20px" class="text-secondary"><b>Wrong TAN</b>. Please try again.</p></div>
 
 </body>
 </html>
